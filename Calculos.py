@@ -1,7 +1,4 @@
 # A notação do dia:
-# fiz o triangulo e arrumei as cores e erros de digitação
-# FAZER O TRIANGULO EQUILATERO
-
 # problema: Linha 144 problema de ponto flutuante
 
 from clear import clear
