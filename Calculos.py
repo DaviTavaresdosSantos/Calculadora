@@ -1,4 +1,7 @@
 # A notação do dia:
+# fiz o triangulo e arrumei as cores e erros de digitação
+# FAZER O TRIANGULO EQUILATERO
+
 # problema: Linha 144 problema de ponto flutuante
 
 from clear import clear
@@ -96,20 +99,18 @@ A = {medida * medida02}''')
 
     elif escolha == '3':
 
-        print()
+        triangulo = input('\nO triangulo é:\n[1]Triângulo retangulo\n[2]Triângulo equilátero\nR:')
 
-    triangulo = input('O triangulo é:\n[1]Triângulo retangulo\n[2]Triângulo equilátero\nR:')
+        while triangulo not in ['1', '2']:
+            print(f'{vermelho}Invalido, por favor responda 1 ou 2\n{fim}')
+            triangulo = input('O triangulo é:\n[1]Triângulo retangulo\n[2]Triângulo equilátero\nR:')
+            clear()
 
-    while triangulo not in ['1', '2']:
-        print(f'{vermelho}Invalido, por favor responda 1 ou 2\n{fim}')
-        triangulo = input('O triangulo é:\n[1]Triângulo retangulo\n[2]Triângulo equilátero\nR:')
-        clear()
+        if triangulo == '1':  # Área do triângulo Retangulo
 
-    if triangulo == '1':  # Área do triângulo Retangulo
+            b, h = [float(i) for i in input('\nInforma b e o h:(Na mesma linha e com espaço): ').split(' ')]
 
-        b, h = [float(i) for i in input('Informa o b e o h:(Na mesma linha e com espaço').split(' ')]
-
-        print(f'''A = b.h
+            print(f'''A = b.h
      2
 
 A = {b}.{h}
@@ -120,15 +121,16 @@ A = {b * h}
 
 A = {(b * h) / 2}''')
 
-    else:  # Área do triângulo equilatero
-        clear()
+        else:  # Área do triângulo equilatero
 
-        base, h = [float(i) for i in input('Informe a base (Valor inteiro) e a hipotensa: ').split(' ')]
-        a = h * h
-        b = base * base / 4
-        altura = (a - b) ** 0.5
+            base, h = [float(i) for i in input('\nInforme a base (Valor inteiro) e a hipotensa: ').split(' ')]
+            a = h * h
+            b = base * base / 4
+            altura = (a - b) ** 0.5
 
-        print(f'''{altura}= h
+            print(f'''
+{altura}= h
+
 A = {b} x {altura} / 2
 
 A= {(base * altura) / 2}''')
